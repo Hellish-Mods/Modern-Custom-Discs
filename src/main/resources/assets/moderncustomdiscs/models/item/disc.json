@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "moderncustomdiscs:item/disc_base",
+        "layer1": "moderncustomdiscs:item/disc_center1",
+        "layer2": "moderncustomdiscs:item/disc_center2"
+    }
+}
