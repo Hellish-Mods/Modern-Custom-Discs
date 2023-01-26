@@ -66,7 +66,10 @@ public class ResourcePackInit implements IPackFinder {
                 File discmodel = new File(models.toFile(), disc.ID);
                 FileWriter modelwriter = new FileWriter(discmodel+".json");
                 if (disc.TEXTURE.exists()) {
-                    FileUtils.copyFile(disc.TEXTURE, textures.resolve(disc.NAME+".png").toFile());
+                    File mcmeta = disc.TEXTURE.toPath().getParent().resolve(disc.NAME+".png.mcmeta").toFile();
+                    FileUtils.copyFile(disc.TEXTURE, textures.resolve(disc.NAME+".png").toFile()); // Copy texture
+                    if (mcmeta.exists()) FileUtils.copyFile(mcmeta, textures.resolve(disc.NAME+".png.mcmeta").toFile()); // Copy mcmeta file (if exists)
+
                     modelwriter.write(String.format("{\"parent\": \"minecraft:item/generated\", \"textures\": {\"layer0\": \"%s:item/custom/%s\"}}", moderncustomdiscs.MOD_ID, disc.NAME));
                 }
                 else modelwriter.write(String.format("{\"parent\": \"%s:item/disc\"}", moderncustomdiscs.MOD_ID));
