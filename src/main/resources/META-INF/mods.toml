@@ -33,3 +33,10 @@ description="A simple mod that allows you to add custom discs"
     versionRange="[1.16.5,1.17)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.moderncustomdiscs]]
+    modId="digitality"
+    mandatory=true
+
+    versionRange=","
+    ordering="AFTER"
+    side="BOTH"

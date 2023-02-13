@@ -15,9 +15,11 @@ import net.minecraftforge.fml.loading.FMLEnvironment;
 
 // Custom disc item class
 public class CustomDiscItem extends MusicDiscItem {
+    final String DESC;
 
-    public CustomDiscItem(RegistryObject<SoundEvent> sound, int redstone) {
+    public CustomDiscItem(RegistryObject<SoundEvent> sound, int redstone, String desc) {
         super(redstone, () -> sound.get(), new Item.Properties().tab(ItemGroup.TAB_MISC).stacksTo(1)); // Some default values + passed comparator value
+        DESC = desc; // Set description
     }
     
     @Override

@@ -19,7 +19,7 @@ public class ColorInit {
         for (Disc disc : DiscInit.DISC_ITEMS) {
             if (!disc.TEXTURE.exists()) { // If no texture exists
                 IItemColor disccolor = (s, index) -> {
-                    return Parsing.parseColorHex(disc.COLORS[index]); // Take the colors and paint it
+                    return Parsing.parseColorHex(disc.config.getColors()[index]); // Take the colors and paint it
                 };
                 e.getItemColors().register(disccolor, disc.DISC_ITEM.get()); // Register
             }

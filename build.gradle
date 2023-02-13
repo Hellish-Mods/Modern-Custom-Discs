@@ -61,6 +61,7 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.34'
 
     implementation fg.deobf("curse.maven:jei-238222:4060770")
+    implementation fg.deobf("curse.maven:digitality-821391:4394674")
 }
 
 jar {
