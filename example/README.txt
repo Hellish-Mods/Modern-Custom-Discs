@@ -5,4 +5,4 @@ Music attribution:
     Watch: http://youtu.be/__CRWE-L45k
 
 Icon attribution:
-    The icon has been copied from https://github.com/twitter/twemoji and resized to 16x16.
+    The images have been copied from https://github.com/twitter/twemoji, resized to 16x16 and combined into 1 texture.
