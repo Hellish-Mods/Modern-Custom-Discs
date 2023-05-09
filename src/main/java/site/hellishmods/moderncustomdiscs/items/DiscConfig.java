@@ -12,6 +12,7 @@ public class DiscConfig {
     String[] colors; // Disc item colors
     int redstone; // Comparator output
 
+    @SuppressWarnings("deprecation")
     public String[] getColors() { // Color shenanigans
         if (colors==null) { // If no "color" parameter in json, make the disc white
             colors[0] = "ffffff";
